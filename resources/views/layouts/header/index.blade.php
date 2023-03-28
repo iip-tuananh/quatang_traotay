@@ -19,7 +19,7 @@
                         <a  title="{{$setting->phone1}}" href="tel:{{$setting->phone1}}"> {{$setting->phone1}}</a>
                         </span>
                      </li>
-                     <li>&nbsp;&nbsp;&nbsp;</li>
+                     <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
                      @if($setting->phone2 != '')
                      <li>
                         Hotline 2: 
@@ -28,6 +28,7 @@
                         </span>
                      </li>
                      @endif
+                     <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
                      <li class="margin-left-20">
                         <b>Địa chỉ</b>: 
                         <span>
