@@ -66,7 +66,7 @@
                <div class="inner clearfix">
                   <div class="row">
                      <div class="col-md-12 text-center text-lg-left">
-                        <span>© Bản quyền thuộc về <b>Trung Thành</b> <b class="fixline">|</b> Cung cấp bởi 
+                        <span> <b class="fixline">|</b> Cung cấp bởi 
                        Cubon web
                         </span>
                      </div>

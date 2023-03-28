@@ -14,11 +14,19 @@
                <div class="col-sm-6 col-md-9 a-left">
                   <ul class="list-inline f-left">
                      <li>
-                        Hotline: 
+                        Hotline 1: 
                         <span>
                         <a  title="{{$setting->phone1}}" href="tel:{{$setting->phone1}}"> {{$setting->phone1}}</a>
                         </span>
                      </li>
+                     @if($setting->phone2 != '')
+                     <li>
+                        Hotline 2: 
+                        <span>
+                        <a  title="{{$setting->phone1}}" href="tel:{{$setting->phone1}}"> {{$setting->phone1}}</a>
+                        </span>
+                     </li>
+                     @endif
                      <li class="margin-left-20">
                         <b>Địa chỉ</b>: 
                         <span>
