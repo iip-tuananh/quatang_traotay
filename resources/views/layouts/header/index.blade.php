@@ -29,7 +29,7 @@
                      </li>
                      @endif
                      <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-                     <li class="margin-left-20">
+                     <li>
                         <b>Địa chỉ</b>: 
                         <span>
                            {{$setting->address1}}
