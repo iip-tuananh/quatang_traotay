@@ -19,7 +19,7 @@
                         <a  title="{{$setting->phone1}}" href="tel:{{$setting->phone1}}"> {{$setting->phone1}}</a>
                         </span>
                      </li>
-                     &nbsp;&nbsp;&nbsp;|
+                     &nbsp;&nbsp;&nbsp;|fef
                      @if($setting->phone2 != '')
                      <li>
                         Hotline 2: 
