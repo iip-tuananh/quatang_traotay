@@ -250,5 +250,12 @@
              );
           </script>
           @endif
+          @if (session()->has('ongtuan'))
+          <script>
+             $.notify("Đặt hàng thành công", "success"
+             );
+          </script>
+          @endif
+        
    </body>
 </html>

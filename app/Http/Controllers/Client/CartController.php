@@ -48,7 +48,7 @@ class CartController extends Controller
                 }
 				DB::commit();
                 $request->session()->forget('cart');
-            return Redirect::to('/')->with('ong','Bạn đã đặt hàng thành công');
+            return Redirect::to('/')->with('ongtuan','Bạn đã đặt hàng thành công');
 			} catch (\Throwable $e) {
 			DB::rollBack();
 			throw $e;

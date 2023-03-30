@@ -127,30 +127,30 @@ export default {
           });
       }, 800);
     },
-    destroy(){
-      this.loadings(true);
-      this.destroyCate(this.id_item)
-      .then(response => {
-        this.listCategory()
-        this.loadings(false);
-        this.$vs.notify({
-              title: "Xóa danh mục",
-              text: "Thành công",
-              color: "success",
-              position: "top-right"
-            });
-      });
-    },
-    confirmDestroy(id){
-      this.id_item = id;
-      this.$vs.dialog({
-        type:'confirm',
-        color: 'danger',
-        title: `Bạn có chắc chắn`,
-        text: 'Xóa danh mục này',
-        accept:this.destroy
-      })
-    }
+    // destroy(){
+    //   this.loadings(true);
+    //   this.destroyCate(this.id_item)
+    //   .then(response => {
+    //     this.listCategory()
+    //     this.loadings(false);
+    //     this.$vs.notify({
+    //           title: "Xóa danh mục",
+    //           text: "Thành công",
+    //           color: "success",
+    //           position: "top-right"
+    //         });
+    //   });
+    // },
+    // confirmDestroy(id){
+    //   this.id_item = id;
+    //   this.$vs.dialog({
+    //     type:'confirm',
+    //     color: 'danger',
+    //     title: `Bạn có chắc chắn`,
+    //     text: 'Xóa danh mục này',
+    //     accept:this.destroy
+    //   })
+    // }
   },
   mounted() {
     this.draftBills()
