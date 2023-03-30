@@ -104,7 +104,7 @@ export default {
     },
     draftBills() {
       this.loadings(true);
-      this.draftBill({ keyword: this.keyword,statu:0 })
+      this.draftBill({ keyword: this.keyword,status:0 })
       .then(response => {
           this.loadings(false);
           this.list = response.data;
@@ -116,7 +116,7 @@ export default {
         this.timer = null;
       }
       this.timer = setTimeout(() => {
-          this.draftBill({ keyword: this.keyword,statu:0 })
+          this.draftBill({ keyword: this.keyword,status:0 })
           .then(response => {
             this.list = response.data;
           });
