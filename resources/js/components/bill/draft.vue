@@ -30,7 +30,7 @@
               <vs-table max-items="5" pagination :data="list" v-if="list.length > 0">
                 <template slot="thead">
                   <vs-th>Mã đơn hàng</vs-th>
-                  <vs-th>Sản phẩm</vs-th>
+                  <!-- <vs-th>Sản phẩm</vs-th> -->
                   <vs-th>Giá đơn hàng</vs-th>
                   <vs-th>Chỉnh sửa lúc</vs-th>
                   <vs-th>Khách hàng</vs-th>
@@ -39,7 +39,7 @@
                 </template>
                 <template slot-scope="{data}">
                   <vs-tr :key="indextr" v-for="(tr, indextr) in data">
-                    <vs-td :data="tr.id">#{{tr.code_bill}}</vs-td>
+                    <!-- <vs-td :data="tr.id">#{{tr.code_bill}}</vs-td> -->
                     <vs-td :data="tr.bill_detail">
                       <div v-for="pr, indexpr in tr.bill_detail" :key="indexpr">
                         <span :data="pr.id">{{pr.name}}</span><br>
