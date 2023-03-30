@@ -1,0 +1,113 @@
+.giohang{
+    height: 50px;
+  
+    width: 50px;
+    position: absolute !important;
+    font-size: 20px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.containernew{
+    position: relative;
+}
+.button-mua{
+    width: 100%;
+    color: wheat;
+    height: 46px;
+    word-break: 0px;
+    word-spacing: 3px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #c10000;
+}
+.button-mua:hover{
+    background-color: red;
+    transition: all 1s;
+}
+.count-item{
+    background-color: red;
+    position: absolute;
+    color: yellow;
+    height: 15px;
+    font-size: 13px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    right: 3px;
+    top: 7px;
+   
+}
+
+    
+   .custom-btn-numbers {
+    float: left;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 7px;
+    border: 1px solid #6c6c79;
+    min-height: unset;
+    width: auto;
+    background-color: transparent;
+    height: auto
+}
+
+.custom-btn-numbers .btn-cts {
+    font-size: 20px;
+    line-height: 0px;
+    border: none;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    float:left;
+    color: rgb(27, 7, 7);
+    text-align: center;
+    padding: 0px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.custom-btn-numbers .btn-cts.btn-minus {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px
+}
+
+.custom-btn-numbers .btn-cts.btn-plus {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px
+}
+.custom-btn-numbers .btn-cts.btn-plus:active{
+    background-color: orangered;
+    color: bisque;
+}
+.custom-btn-numbers .btn-cts.btn-minus:active{
+    background-color: orangered;
+    color: bisque;
+}
+
+.custom-btn-numbers #qty {
+    height: 35px;
+    font-size: 1em;
+    margin: 0;
+    width: 35px;
+    padding: 0 2px;
+    text-align: center;
+    background: #fff;
+    min-height: unset;
+    display: block;
+    float: left;
+    box-shadow: none;
+    border-radius: 0px;
+    border: none;
+    user-select:none !important;
+}
+.flex-gio{
+    display: flex;
+}

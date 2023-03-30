@@ -102,7 +102,11 @@
       </div>
    </div>
    <nav>
-      <div class="container">
+      <div class="container containernew">
+         <div class="giohang">
+            <a href="{{route('listCart')}}"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+            <div class="count-item">{{count($cartcontent)}}</div>
+         </div>
          <div class="menu-offcanvas">
             <div class="hidden-lg hidden-xl hidden-md head-menu clearfix">
                <ul class="list-inline">
@@ -153,8 +157,9 @@
                </li>
                <li class="nav-item "><a title="Liên hệ" class="nav-link" href="{{route('lienHe')}}">Liên hệ</a></li>
             </ul>
-            <div class="menu-search f-right bbbbb hidden-sm hidden-xs">
+            <div class="menu-search f-right bbbbb hidden-sm hidden-xs"  style="margin-right: 65px">
                <div class="header_search search_form">
+
                   <form class="input-group search-bar search_form" action="{{route('search_result')}}" method="post" role="search">		
                      @csrf
                      <input type="search" name="keyword" placeholder="Tìm sản phẩm" class="input-group-field st-default-search-input search-text auto-search" autocomplete="off">

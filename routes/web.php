@@ -51,9 +51,9 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('nhan-bao-gia.html','PageController@baogia')->name('baogia');
 
     Route::get('gio-hang.html', 'CartController@listCart')->name('listCart');
-    Route::post('add-to-cart', 'CartController@addToCart')->name('add.to.cart');
-    Route::post('update-cart', 'CartController@update')->name('update.cart');
-    Route::post('remove-from-cart', 'CartController@remove')->name('remove.from.cart');
+    Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('add.to.cart');
+    Route::get('update-cart', 'CartController@update')->name('update.cart');
+    Route::get('remove-from-cart', 'CartController@remove')->name('remove.from.cart');
     Route::get('thanh-toan.html','CartController@checkout')->name('checkout');
     Route::post('thantoan','CartController@postBill')->name('postBill');
 

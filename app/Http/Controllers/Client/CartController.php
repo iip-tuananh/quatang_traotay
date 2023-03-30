@@ -35,21 +35,20 @@ class CartController extends Controller
                 $query->cus_address= $request->billingAddress;
                 $query->transport_price = $request->shippingMethod ? $request->shippingMethod : 0;
 				$query->save();
-
-					
                 foreach($cart as $key => $item){
                     $billdetail = new BillDetail();
                     $billdetail->code_bill = $code_bill;
-                    $billdetail->code_product = $item['idpro'];
+                    $billdetail->code_product = $item['id'];
                     $billdetail->name =languageName($item['name']);
                     $billdetail->price = $item['price'];
                     $billdetail->qty = $item['quantity'];
                     $billdetail->images = $item['image'];
+                    $billdetail->discount = $item['discount'];
                     $billdetail->save();
                 }
 				DB::commit();
                 $request->session()->forget('cart');
-                return Redirect::to('/')->with('success', 'Gửi đơn hàng thành công');
+            return Redirect::to('/')->with('ong','Bạn đã đặt hàng thành công');
 			} catch (\Throwable $e) {
 			DB::rollBack();
 			throw $e;
@@ -64,25 +63,54 @@ class CartController extends Controller
     }
     public function addToCart(Request $request)
     {
-        $product = Product::findOrFail($request->product_id);
+        $id = $request->id;
+        $product = Product::findOrFail($id);
+        $cart = session()->get('cart',[]);
+        if (isset($request->quantity)) {
+            if(isset($cart[$id])) {
+                $cart[$id]['quantity'] = $cart[$id]['quantity'] + $request->quantity;
 
-        $cart = session()->get('cart', []);
-
-        if(isset($cart[$request->product_id])) {
-            $cart[$request->product_id]['quantity'] = $cart[$request->product_id]['quantity'] + $request->quantity;
+            } else {
+                $cart[$id] = [
+                    "id" => $product->id,
+                    "name" => $product->name,
+                    "quantity" => $request->quantity,
+                    "price" => $product->price,
+                    "discount" => $product->discount,
+                    "cate_slug" => $product->cate_slug,
+                    "type_slug" => $product->type_slug,
+                    "slug"=>$product->slug,
+                    "image" => json_decode($product->images)[0],
+                ];
+            }
         } else {
-            $cart[$request->product_id] = [
-                "idpro" => $request->product_id,
-                "name" => $product->name,
-                "quantity" => $request->quantity,
-                "price" => $product->price,
-                "discount" => $product->discount,
-                "image" => json_decode($product->images)[0]
-            ];
+            if(isset($cart[$id])) {
+                $cart[$id]['quantity'] = $cart[$id]['quantity'] + 1;
+         
+            } else {
+                $cart[$id] = [
+                    "id" => $product->id,
+                    "name" => $product->name,
+                    "quantity" => 1,
+                    "price" => $product->price,
+                    "discount" => $product->discount,
+                    "cate_slug" => $product->cate_slug,
+                    "type_slug" => $product->type_slug,
+                    "slug"=>$product->slug,
+                    "image" => json_decode($product->images)[0],
+                    
+                ];
+            }
         }
         
         session()->put('cart', $cart);
-        return response()->json($cart);
+        $data['cart'] = session()->get('cart',[]);
+        $data['cartItemName'] = $cart[$id]['name'];
+        $view2 = view('layouts.product.count-item', $data)->render();
+        return response()->json([
+            'html2' => $view2,
+           
+        ]);
     }
     public function update(Request $request)
     {
@@ -90,7 +118,12 @@ class CartController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
-            return response()->json($cart);
+            $data['cart'] = session()->get('cart',[]);
+            $data['cartItemName'] = $cart[$request->id]['name'];
+            $view3 = view('cart.list-cart-ajax', $data)->render();
+            return response()->json([
+                'html3' => $view3,
+            ]);
         }
         
     }
@@ -102,7 +135,13 @@ class CartController extends Controller
                 unset($cart[$request->id]);
                 session()->put('cart', $cart);
             }
-            return response()->json($cart);
+            $data['cart'] = session()->get('cart',[]);
+            $view3 = view('cart.list-cart-ajax', $data)->render();
+            $view2 = view('layouts.product.count-item', $data)->render();
+            return response()->json([
+                'html3' => $view3,
+                'html2' => $view2,
+            ]);
         }
     }
 }

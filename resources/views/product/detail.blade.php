@@ -18,6 +18,24 @@ $img = json_decode($product->images);
 <script src="{{asset('frontend/js/jquery.elevatezoom308.min.js')}}" type="text/javascript"></script>		
 <script src="{{asset('frontend/js/jquery.prettyphoto.min005e.js')}}" type="text/javascript"></script>
 <script src="{{asset('frontend/js/jquery.prettyphoto.init.min367a.js')}}" type="text/javascript"></script>
+<script>
+   $('.add_to_cart').click(function (e) { 
+      e.preventDefault();
+      var quantity = $('#qty').val();
+      var url = $(this).data('url');
+      $.ajax({
+         type: "get",
+         url: url,
+         data: {
+            quantity:quantity,
+         },
+         success: function (data) {
+            $('.count-item').html(data.html2);
+                    $.notify("Thêm vào giỏ hàng thành công", "success");
+         }
+      });
+   });
+</script>
 @endsection
 @section('content')
 <section class="bread_crumb py-4">
@@ -97,20 +115,26 @@ $img = json_decode($product->images);
                       </div>
                       <div class="form-product ">
                          <div class="social-sharing">
-                            <div class="social-media" data-permalink="{{ Request::fullUrl() }}">
-                               <label>Chia sẻ: </label>
-                               <a target="_blank" href="//www.facebook.com/sharer.php?u={{ Request::fullUrl() }}" class="share-facebook" title="Chia sẻ lên Facebook">
-                               <i class="fa fa-facebook"></i>
-                               </a>
-                               <a target="_blank" href="//twitter.com/share?text=vai-thieu-loai-to"  class="share-twitter" title="Chia sẻ lên Twitter">
-                               <i class="fa fa-twitter"></i>
-                               </a>
-                               <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ Request::fullUrl() }}" class="share-pinterest" title="Chia sẻ lên pinterest">
-                               <i class="fa fa-pinterest"></i>
-                               </a>
-                               <a target="_blank" href="//plus.google.com/share?url={{ Request::fullUrl() }}" class="share-google" title="+1">
-                               <i class="fa fa-google-plus"></i>
-                               </a>
+                            <div class="social-media">
+                              <div class="custom custom-btn-numbers form-control">	
+                            
+                                 <button 
+                                 onclick="var result = document.getElementById('qty'); 
+                                 var qty = result.value;
+                                 if( !isNaN(qty) & qty > 1 ) result.value--;return false;" 
+                                 class="btn-minus btn-cts" 
+                                 type="button">–</button>
+                         
+                                 <input type="text" class="qty input-text" id="qty" name="quantity" size="4" value="1" maxlength="3" disabled/>
+                         
+                                 <button onclick="var result = document.getElementById('qty'); var qty = result.value; 
+                                 if( !isNaN(qty)) result.value++;return false;" 
+                                 class="btn-plus btn-cts" 
+                                 type="button">+</button>
+                                 </div>
+                                 <br>
+                                 <br>
+                              <button class="add_to_cart button-mua" data-url="{{route('add.to.cart',['id'=>$product->id])}}" >Mua Ngay</button>
                             </div>
                          </div>
                       </div>

@@ -43,13 +43,16 @@
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/bootstrap-theme.css')}}">
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/style-theme.scss.css')}}">
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/responsive-update.scss.css')}}">
+      <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
       <!-- Theme Main CSS -->
       <link href="{{asset('frontend/css/bootstrap-theme.css')}}" rel="stylesheet" type="text/css" />
       <link href="{{asset('frontend/css/style-theme.scss.css')}}" rel="stylesheet" type="text/css" />
       <link href="{{asset('frontend/css/responsive-update.scss.css')}}" rel="stylesheet" type="text/css" />
       <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- Header JS -->	
       <script src="{{asset('frontend/js/jquery-2.2.3.min.js')}}" type="text/javascript"></script>
+      @yield('css')
    
    </head>
    <body>
@@ -230,6 +233,7 @@
       <!-- Main JS -->	
       <script src="{{asset('frontend/js/dl_main.js')}}" type="text/javascript"></script>
       <script src="{{asset('frontend/js/rx-all-min.js')}}" type="text/javascript"></script>
+      <script src="{{asset('frontend/js/notify.min.js')}}"></script>
       @yield('js')
       <script>
          function replaceImg($class) {
@@ -240,5 +244,11 @@
          }
              window.onload = replaceImg($("#article-content"));
          </script>
+          @if (session()->has('dathangthanhcong'))
+          <script>
+             $.notify("Đặt hàng thành công", "success"
+             );
+          </script>
+          @endif
    </body>
 </html>
