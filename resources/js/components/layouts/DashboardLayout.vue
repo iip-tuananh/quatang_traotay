@@ -183,18 +183,18 @@ export default {
           name: "Quản lý đơn hàng",
           route_name: "",
           sub: [
-            {
-              name: "Đơn hàng đã thanh toán",
-              path: "/bill/paymented",
-            },
+            // {
+            //   name: "Đơn hàng đã thanh toán",
+            //   path: "/bill/paymented",
+            // },
             {
               name: "Đơn hàng cần kiểm tra",
               path: "/bill/draft",
             },
-            {
-              name: "Đơn hàng chưa hoàn tất",
-              path: "/bill/Unpayment",
-            },
+            // {
+            //   name: "Đơn hàng chưa hoàn tất",
+            //   path: "/bill/Unpayment",
+            // },
           ],
         },
         // {
