@@ -12,7 +12,7 @@
                   </div>
                 </div>
                 <div class="col-md-9">
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Tiêu đề (Bỏ trống nếu là banner nhỏ)</label>
                     <label style="float: right;cursor: pointer" title="Xóa banner" v-if="key != 0" @click="removeObjBanner(key)">
                       <vs-icon icon="clear"></vs-icon>
@@ -24,8 +24,8 @@
                       placeholder="Tiêu đề banner"
                       class="w-100"
                     />
-                  </div>
-                  <div class="form-group">
+                  </div> -->
+                  <!-- <div class="form-group">
                     <label>Mô tả</label>
                     <label style="float: right;cursor: pointer" title="Xóa banner" v-if="key != 0" @click="removeObjBanner(key)">
                       <vs-icon icon="clear"></vs-icon>
@@ -37,8 +37,8 @@
                       placeholder="Mô tả banner"
                       class="w-100"
                     />
-                  </div>
-                  <div class="form-group">
+                  </div> -->
+                  <!-- <div class="form-group">
                     <label>Link</label>
                     <label style="float: right;cursor: pointer" title="Xóa banner" v-if="key != 0" @click="removeObjBanner(key)">
                       <vs-icon icon="clear"></vs-icon>
@@ -50,7 +50,7 @@
                       placeholder="Link banner"
                       class="w-100"
                     />
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <label>Trạng thái</label>
                     <vs-select v-model="item.status"

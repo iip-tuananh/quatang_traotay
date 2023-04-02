@@ -126,7 +126,7 @@
                   />
                 </vs-select>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Thương hiệu</label>
                 <vs-select
                   class="selectExample"
@@ -141,7 +141,7 @@
                     :key="'v' + index"
                   />
                 </vs-select>
-              </div>
+              </div> -->
              <!-- <div class="form-group">
                 <label>Thông số kỹ thuật</label>
                 <div v-for="(item, index) in objData.size" :key="index">

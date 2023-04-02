@@ -25,7 +25,7 @@
                       class="w-100"
                     />
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Link</label>
                     <vs-input
                       type="text"
@@ -34,7 +34,7 @@
                       placeholder="Link liên kết với đối tác (bỏ trống nếu không có)"
                       class="w-100"
                     />
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <label>Trạng thái</label>
                     <vs-select v-model="item.status"
