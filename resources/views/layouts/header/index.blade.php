@@ -24,7 +24,7 @@
                      <li>
                         Hotline 2: 
                         <span>
-                        <a  title="{{$setting->phone1}}" href="tel:{{$setting->phone1}}"> {{$setting->phone1}}</a>
+                        <a  title="{{$setting->phone2}}" href="tel:{{$setting->phone2}}"> {{$setting->phone2}}</a>
                         </span>
                      </li>
                      @endif
