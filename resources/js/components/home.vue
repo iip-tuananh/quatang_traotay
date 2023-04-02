@@ -217,59 +217,7 @@
         </card>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <card>
-          <h4 slot="header" class="card-title">Best Selling Products</h4>
-          <div class="table-responsive">
-            <n-table class="table-shopping" :data="productsTable">
-              <template slot="columns">
-                <th class="text-center"></th>
-                <th>Product</th>
-                <th>Color</th>
-                <th>Size</th>
-                <th class="text-right">Price</th>
-                <th class="text-right">Qty</th>
-                <th class="text-right">Amount</th>
-              </template>
-              <template slot-scope="{ row }">
-                <td>
-                  <div class="img-container">
-                    <img :src="row.image" alt="..." />
-                  </div>
-                </td>
-                <td class="td-name">
-                  <a href="#jacket">{{ row.title }}</a>
-                  <br />
-                  <small>{{ row.subTitle }}</small>
-                </td>
-                <td>{{ row.color }}</td>
-                <td>{{ row.size }}</td>
-                <td class="td-number">
-                  <small>€</small>
-                  {{ row.price }}
-                </td>
-                <td class="td-number">
-                  {{ row.quantity }}
-                </td>
-                <td class="td-number">
-                  <small>€</small>
-                  {{ row.amount }}
-                </td>
-              </template>
-              <template slot="summary-row">
-                <td colspan="5"></td>
-                <td class="td-total">Total</td>
-                <td class="td-price">
-                  <small>€</small>
-                  2,346
-                </td>
-              </template>
-            </n-table>
-          </div>
-        </card>
-      </div>
-    </div>
+ 
   </div>
 </template>
 <script>
