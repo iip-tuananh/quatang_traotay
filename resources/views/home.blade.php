@@ -84,7 +84,11 @@
          <div class="banner-slider slickp_banner_1" data-lg-items='4' data-md-items='4' data-sm-items='2' data-xs-items="2" data-nav="true">
             @foreach ($bannerqc as $item)
                <div class="item">
+                  @if($item->link != '')
                   <a href="{{$item->link}}" class="clearfix">
+                     @else
+                     <a href="javascript:;" class="clearfix">
+                        @endif
                   <img src="{{$item->image}}" alt="{{$item->image}}" height="158">
                   </a>	
                </div>
