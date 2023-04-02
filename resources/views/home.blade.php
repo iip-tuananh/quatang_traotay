@@ -83,10 +83,9 @@
          <h2 class="hidden">Banner</h2>
          <div class="banner-slider slickp_banner_1" data-lg-items='4' data-md-items='4' data-sm-items='2' data-xs-items="2" data-nav="true">
             @foreach ($bannerqc as $item)
-            @dd($bannerqc);
                <div class="item">
-                  @if($item->link != '')
-                  <a href="{{$item->link}}" class="clearfix">
+                  @if($item->name != '')
+                  <a href="{{$item->name}}" class="clearfix">
                      @else
                      <a href="javascript:;" class="clearfix">
                         @endif
