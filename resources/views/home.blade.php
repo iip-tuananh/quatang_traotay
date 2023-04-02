@@ -71,6 +71,7 @@
             dots: false,
             loop: false,
          arrows: false,
+         autoplay:true,
             slidesToShow: 1
       
          });
