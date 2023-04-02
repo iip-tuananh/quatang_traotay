@@ -134,10 +134,10 @@ export default {
             //   name: "Danh mục bài viết",
             //   path: "/blog/category",
             // },
-            {
-              name: "Loại bài viết",
-              path: "/blog/type",
-            },
+            // {
+            //   name: "Loại bài viết",
+            //   path: "/blog/type",
+            // },
           ],
         },
         {
