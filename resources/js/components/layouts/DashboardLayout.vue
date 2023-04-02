@@ -104,10 +104,10 @@ export default {
               name: "Loại sản phẩm",
               path: "/product/type",
             },
-            {
-              name: "Thương hiệu sản phẩm",
-              path: "/product/typetwo",
-            },
+            // {
+            //   name: "Thương hiệu sản phẩm",
+            //   path: "/product/typetwo",
+            // },
           ],
         },
         {
@@ -130,10 +130,10 @@ export default {
               name: "Danh sách bài viết",
               path: "/blogs",
             },
-            {
-              name: "Danh mục bài viết",
-              path: "/blog/category",
-            },
+            // {
+            //   name: "Danh mục bài viết",
+            //   path: "/blog/category",
+            // },
             {
               name: "Loại bài viết",
               path: "/blog/type",
@@ -164,14 +164,14 @@ export default {
               name: "Quản lý đối tác",
               path: "/partner",
             },
-            {
-              name: "Thư viện ảnh",
-              path: "/prize",
-            },
-            {
-              name: "Quản lý Founder",
-              path: "/founder",
-            },
+            // {
+            //   name: "Thư viện ảnh",
+            //   path: "/prize",
+            // },
+            // {
+            //   name: "Quản lý Founder",
+            //   path: "/founder",
+            // },
             {
               name: "Cài đặt chung",
               path: "/setting",
