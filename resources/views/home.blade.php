@@ -172,7 +172,7 @@
                                     </ul>
                                     <div class="row">
                                        @foreach ($item->product as $item)
-                                       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                       <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
                                           @include('layouts.product.item',['pro'=>$item])
                                        </div>
                                        @endforeach
