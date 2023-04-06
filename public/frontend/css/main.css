@@ -111,3 +111,10 @@
 .flex-gio{
     display: flex;
 }
+.btn-xemthem button{
+    background-color: #099953;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

@@ -10,7 +10,7 @@
          </a>
       </div>
       <div class="product-info a-center">
-         <h3 class="product-name"><a href="{{route('detailProduct',['cate'=>$pro->cate_slug,'type'=>$pro->type_slug ? $pro->type_slug : 'loai','id'=>$pro->slug])}}" title="{{languageName($pro->name)}}">{{languageName($pro->name)}}</a></h3>
+         <h3 class="product-name"><a style="font-size:14px" href="{{route('detailProduct',['cate'=>$pro->cate_slug,'type'=>$pro->type_slug ? $pro->type_slug : 'loai','id'=>$pro->slug])}}" title="{{languageName($pro->name)}}">{{languageName($pro->name)}}</a></h3>
          <div class="sapo-product-reviews-badge" data-id="11480175"></div>
          <div class="price-box clearfix">
             <div class="special-price">
@@ -19,6 +19,8 @@
                @else 
                <span class="price product-price">Liên hệ</span>
                @endif
+               <br>
+               <a  class="btn-xemthem" href="{{route('detailProduct',['cate'=>$pro->cate_slug,'type'=>$pro->type_slug ? $pro->type_slug : 'loai','id'=>$pro->slug])}}"><button class="">xem thêm</button></a>
             </div>
          </div>
       </div>
