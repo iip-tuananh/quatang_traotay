@@ -52,14 +52,14 @@
    <div class="container">
       <div class="header-content clearfix a-center">
          <div class="row">
-            <div class="col-xs-12 col-md-3 text-lg-left">
+            <div class="col-xs-12 col-md-2 text-lg-left">
                <div class="logo inline-block">
                   <a href="/" class="logo-wrapper ">					
                   <img src="{{$setting->logo}}" alt="logo " width="103">					
                   </a>
                </div>
             </div>
-            <div class="col-xs-12 col-md-9 col-lg-9 hidden-xs">
+            <div class="col-xs-12 col-md-10 col-lg-10 hidden-xs">
                <div class="policy d-flex justify-content-around">
                   <div class="item-policy d-flex align-items-center">
                      <a title="policy1_title" href="#">
