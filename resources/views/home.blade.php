@@ -77,7 +77,7 @@
          });
    </script>
 </section>
-@if(count($bannerqc) > 0)
+{{-- @if(count($bannerqc) > 0)
 <section class="awe-section-2" id="awe-section-2">
    <div class="section_banner">
       <div class="container">
@@ -143,7 +143,23 @@
       
    </script>
 </section>
-@endif
+@endif --}}
+<div class="container">
+   <div class="row">
+      @foreach ($danhmuchome as $item)
+         <div class="col-lg-3 col-md-6">
+            <div class="wp-item-sp-home">
+               <div class="img-top-sp"><a title="{{languageName($item->name)}}" href="{{route('allListProCate',['danhmuc'=>$item->slug])}}"><img src="{{$item->avatar}}" alt=""></a></div>
+               <div class="tex-top-sp">
+                  <h3 class="h3-title-sp"><a title="{{languageName($item->name)}}" href="{{route('allListProCate',['danhmuc'=>$item->slug])}}">{{languageName($item->name)}}</a></h3>
+               </div>
+            </div>
+         </div>
+      @endforeach
+     
+   </div>
+</div>
+
 @foreach ($categoryhome as $key => $item)
 @if (count($item->product) > 0)
 <section class="awe-section-3" id="awe-section-3">
@@ -163,10 +179,10 @@
                                     </h2>
                                  </div>
                                  <div>
-                                    <ul class="tabs tabs-title ajax clearfix hidden-xs">
+                                    <ul class="tabs tabs-title ajax clearfix ">
                                        @foreach ($item->typeCate as $key => $i)
                                        <li class="tab-link has-content" >
-                                          <a href="{{route('allListType',['danhmuc'=>$item->slug,'loaidanhmuc'=>$i->slug])}}">{{languageName($i->name)}}</a>
+                                          <a  style="color:rgb(1, 116, 1)"href="{{route('allListType',['danhmuc'=>$item->slug,'loaidanhmuc'=>$i->slug])}}">{{languageName($i->name)}}</a>
                                        </li>
                                        @endforeach
                                     </ul>

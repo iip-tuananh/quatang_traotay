@@ -43,6 +43,7 @@
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/bootstrap-theme.css')}}">
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/style-theme.scss.css')}}">
       <link rel="preload" as='style' type="text/css" href="{{asset('frontend/css/responsive-update.scss.css')}}">
+      <link rel="stylesheet" href="{{asset('frontend/css/fqjij.css')}}">
       <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
       <!-- Theme Main CSS -->
       <link href="{{asset('frontend/css/bootstrap-theme.css')}}" rel="stylesheet" type="text/css" />

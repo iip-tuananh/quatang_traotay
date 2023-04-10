@@ -55,6 +55,7 @@ class AppServiceProvider extends ServiceProvider
                 $query->setRelation('product', $query->product->take(6));
                 return $query;
             });
+            $danhmuchome = Category::where('status', '1')->limit(4)->get();
             $banner = Banner::where(['status'=>1])->get(['id','image','link','title','description']);
             $cartcontent = session()->get('cart', []);
             $viewold = session()->get('viewoldpro', []);
@@ -78,7 +79,8 @@ class AppServiceProvider extends ServiceProvider
                 'cartcontent'=>$cartcontent,
                 'viewold'=>$viewold,
                 'compare'=>$compare,
-                'blogCate'=>$blogCate
+                'blogCate'=>$blogCate,
+                'danhmuchome'=>$danhmuchome,
                 ]);    
         });  
     }
