@@ -90,7 +90,7 @@
                   </div>
                   <div class="item-policy d-flex align-items-center">
                      <div class="info a-left">
-                        <div class="wp-phone"> <i><img src="https://quatangnhattruong.vn/wp-content/themes/quatangnhattruong/lib/images/icon-phone3.png" alt="0987.162.066"></i> <span><a href="tel:0987.162.066">0987.162.066</a></span></div>
+                        <div class="wp-phone"> <i><img src="{{asset('frontend/images/icon-phone3.png')}}" alt="0987.162.066"></i> <span><a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a></span></div>
                      </div>
                   </div>
                </div>
