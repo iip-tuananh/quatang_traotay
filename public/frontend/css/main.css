@@ -133,6 +133,6 @@
     cursor: pointer;
     }
     .giohang i{
-        background-color: green !important;
+        color: green !important;
     }
 }
