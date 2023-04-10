@@ -22,14 +22,14 @@
                     font-size="40px"
                   />
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
                   <label>Ảnh đại diện</label>
                   <image-upload
                     v-model="objData.avatar"
                     type="avatar"
                     :title="'danh-muc'"
                   ></image-upload>
-                </div> -->
+                </div>
                 <!-- <div class="form-group">
                 <label>Nội dung</label>
                  <TinyMce v-model="objData.content" />
