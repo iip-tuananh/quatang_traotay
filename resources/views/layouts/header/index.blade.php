@@ -39,10 +39,7 @@
                </div>
                <div class="col-sm-6 col-md-3">
                   <ul class="list-inline f-right">
-                     <li class="li-search">
-                        <a href="{{$setting->facebook}}">
-                        <i class="fa fa-facebook-official"></i></a>
-                     </li>
+                    
                   </ul>
                </div>
             </div>
@@ -100,7 +97,7 @@
       <div class="menu-bar hidden-md hidden-lg">
          <img src="{{url('frontend/images/menu-bar.png')}}" alt="menu bar" />
       </div>
-      <div class="icon-cart-mobile hidden-md hidden-lg f-left absolute" onclick="window.location.href='{{$setting->facebook}}'">
+      <div class="icon-cart-mobile hidden-md hidden-lg f-left absolute hidden-xs" onclick="window.location.href='{{$setting->facebook}}'">
          <div class="icon relative">
             <i class="fa fa-facebook-official"></i>
          </div>
