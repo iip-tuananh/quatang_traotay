@@ -87,6 +87,9 @@
                         <a title="Giờ làm việc" href="javascript:;">Giờ làm việc</a>
                         <p>T2 - T7 Giờ hành chính</p>
                      </div>
+                     <div class="info a-left">
+                        <div class="wp-phone"> <i><img src="https://quatangnhattruong.vn/wp-content/themes/quatangnhattruong/lib/images/icon-phone3.png" alt="0987.162.066"></i> <span><a href="tel:0987.162.066">0987.162.066</a></span></div>
+                     </div>
                   </div>
                </div>
             </div>
